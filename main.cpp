@@ -152,7 +152,7 @@ private:
         		prevEnd = Memory;
         	else
         		prevEnd = beg->end;
-        	if(end == NULL) end = (MBnode *)(MEM_SIZE + 1);		// last node before end check
+        	if(end == NULL) end = (MBnode *)(&Memory[MEM_SIZE]);		// last node before end check
             return ((char *)end - prevEnd) > needSize;
         }
 
